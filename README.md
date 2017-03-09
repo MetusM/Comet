@@ -10,26 +10,11 @@
 	
 6. Add in your client.php file after: use.sso.ticket
 
-	"comet.camera.uploadLink" : "%yourlink%/comet-imaging/photo.php?ssoTicket=%yourplayerssso%",
+	"comet.camera.uploadLink" : "%yourlink%/comet-imaging/photo.php?ssoTicket=%playersso%",
 
-7. Add this to your furnidata.xml or use our latest furnidata.xml (you can find in folder: _Files)
-
-	<furnitype id="50001" classname="external_image_wallitem_poster">
-	<revision>1337</revision>
-	<name>Camera picture</name>
-	<description></description>
-	<adurl></adurl>
-	<offerid>-1</offerid>
-	<buyout>0</buyout>
-	<rentofferid>-1</rentofferid>
-	<rentbuyout>0</rentbuyout>
-	<bc>0</bc>
-	<excludeddynamic>0</excludeddynamic>
-	<specialtype>1</specialtype>
-	</furnitype>
-	
+7. Use our latest furnidata.xml (folder: _Files)
 8. Add external_image_wallitem_poster.swf to your hof_furni (see folder: _Files)
-9. Use our latest Habbo.swf (you can find in _Folder)
+9. Use our latest Habbo.swf (folder: _Files)
 10. Make sure you use the latest Comet version.
 
 # I found bugs :-(
