@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>Comet</groupId>
+    <artifactId>Comet-Parent</artifactId>
+
+    <packaging>pom</packaging>
+
+    <version>1.2.1-ALPHA1</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <name>Comet</name>
+    <url>https://www.cometproject.com</url>
+    <description>Comet Server developed by the Comet Team</description>
+
+    <modules>
+        <module>Comet-API</module>
+        <module>Comet-API-Example</module>
+        <module>Comet-Server-Protocol</module>
+        <module>Comet-Server</module>
+        <module>Comet-Launcher</module>
+        <module>Comet-Manager</module>
+        <module>Comet-StressTest</module>
+    </modules>
+</project>
