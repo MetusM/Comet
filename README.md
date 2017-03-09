@@ -1,4 +1,7 @@
 # How to configure Camera?
+
+Warning! People can upload custom images by using scripts and use the picture as photo in your hotel. Nothing dangerous can be uploaded however if you don't like porn images as example, please do NOT configure the camera. But as I seen sex commands before, I think it's no problem for the most of you!
+
 1. Upload the folder 'comet-imaging' to your website.
 2. Configure photo.php (make sure API is enabled in your comet.properties!)
 3. Make sure to grant write access to folder 'photos' in comet-imaging (Screen: http://prntscr.com/ei0typ)
