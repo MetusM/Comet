@@ -12845,6 +12845,7 @@ INSERT INTO `furniture` VALUES ('757369154', 'paris_c15_vegstall1', 'paris_c15_v
 INSERT INTO `furniture` VALUES ('757369155', 'paris_c15_vegstall2', 'paris_c15_vegstall2', 's', '1', '1', '0', '0', '0', '0', '757369155', '1', '1', '1', '1', '1', 'default', '2', '0', '0', '0', '-1', '0', '1', '', null);
 INSERT INTO `furniture` VALUES ('757369156', 'paris_c15_vegstall3', 'paris_c15_vegstall3', 's', '1', '1', '0', '0', '0', '0', '757369156', '1', '1', '1', '1', '1', 'default', '2', '0', '0', '0', '-1', '0', '1', '', null);
 INSERT INTO `furniture` VALUES ('757369157', 'paris_c15_wall', 'paris_c15_wall', 'i', '1', '1', '0', '0', '0', '0', '757369157', '1', '1', '1', '1', '1', 'default', '3', '0', '0', '0', '-1', '0', '1', '', null);
+INSERT INTO `furniture` VALUES ('50001', 'Photo', 'external_image_wallitem_poster', 'i', '1', '1', '1', '0', '0', '0', '50001', '1', '1', '1', '1', '1', 'photo', '1', '0', '0', '0', '-1', '0', '1', '', null);
 
 -- ----------------------------
 -- Table structure for furniture_music
