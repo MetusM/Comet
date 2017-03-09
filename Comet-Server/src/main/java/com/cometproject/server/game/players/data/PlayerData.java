@@ -40,6 +40,8 @@ public class PlayerData implements PlayerAvatar, IPlayerData {
     private boolean vip;
     private int questId;
 
+    private long lastPhotoTaken;
+
     public PlayerData(int id, String username, String motto, String figure, String gender, String email, int rank, int credits, int vipPoints, int activityPoints,
                       String reg, int lastVisit, boolean vip, int achievementPoints, int regTimestamp, int favouriteGroup, String ipAddress, int questId) {
         this.id = id;
@@ -60,6 +62,7 @@ public class PlayerData implements PlayerAvatar, IPlayerData {
         this.favouriteGroup = favouriteGroup;
         this.ipAddress = ipAddress;
         this.questId = questId;
+        this.lastPhotoTaken = 0;
 
         if(this.figure != null) {
             if (!PlayerFigureValidator.isValidFigureCode(this.figure, this.gender.toLowerCase())) {
@@ -276,4 +279,8 @@ public class PlayerData implements PlayerAvatar, IPlayerData {
     public void setAchievementPoints(int achievementPoints) {
         this.achievementPoints = achievementPoints;
     }
+
+    public long getLastPhotoTaken() { return this.lastPhotoTaken; }
+
+    public void setLastPhotoTaken(long val) { this.lastPhotoTaken = val; }
 }

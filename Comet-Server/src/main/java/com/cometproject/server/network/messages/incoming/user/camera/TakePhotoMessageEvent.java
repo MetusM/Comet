@@ -1,5 +1,6 @@
 package com.cometproject.server.network.messages.incoming.user.camera;
 
+import com.cometproject.server.boot.Comet;
 import com.cometproject.server.config.CometSettings;
 import com.cometproject.server.config.Locale;
 import com.cometproject.server.game.achievements.types.AchievementType;
@@ -17,6 +18,14 @@ import com.google.common.collect.Sets;
 public class TakePhotoMessageEvent implements Event {
     @Override
     public void handle(Session client, MessageEvent msg) throws Exception {
+        if(client.getPlayer().getData().getLastPhotoTaken() > 0) {
+            final long currentTime = Comet.getTime();
+            final long diff = currentTime - client.getPlayer().getData().getLastPhotoTaken();
+            if (diff < 30) {
+                return;
+            }
+        }
+
         final String code = msg.readString();
         final String itemExtraData = "{\"t\":" + System.currentTimeMillis() + ",\"u\":\"" + code + "\",\"n\":\"" + client.getPlayer().getData().getUsername() + "\",\"m\":\"\",\"s\":" + client.getPlayer().getId() + ",\"w\":\"" + CometSettings.cameraPhotoUrl.replace("%photoId%", code) + "\"}";
 
@@ -28,8 +37,10 @@ public class TakePhotoMessageEvent implements Event {
         client.send(new NotificationMessageComposer("generic", Locale.getOrDefault("camera.photoTaken", "You successfully took a photo!")));
         client.send(new UpdateInventoryMessageComposer());
 
+
         client.send(new UnseenItemsMessageComposer(Sets.newHashSet(playerItem)));
 
+        client.getPlayer().getData().setLastPhotoTaken(Comet.getTime());
         client.getPlayer().getAchievements().progressAchievement(AchievementType.CAMERA_PHOTO, 1);
     }
 }
