@@ -17,6 +17,9 @@
 9. Use our latest Habbo.swf (folder: _Files)
 10. Make sure you use the latest Comet version.
 
+# Downloads
+SWF: http://sulake.cc/Comet-Protect/Comet-SWFS.rar (You need to replace the existing Habbo.swf with the new one which you can find in _Folder)
+
 # I found bugs :-(
 Let us know!
 
